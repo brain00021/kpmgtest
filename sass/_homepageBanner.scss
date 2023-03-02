@@ -1,0 +1,123 @@
+.homepage-banner-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  // padding: 10px;
+  .swiper {
+    height: 550px;
+    position: relative;
+    @include rwd($sm) {
+      height: 400px;
+    }
+    .banner-box {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      padding: 15px;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      background-size: cover;
+
+      @include rwd($sm) {
+        background-position: center;
+        align-items: flex-start;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include rwd($md) {
+          justify-content: flex-start;
+          width: 100%;
+        }
+        @include rwd($sm) {
+          align-items: center;
+        }
+      }
+      h1 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: 0.065em;
+        color: $defaultColor;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        color: $defaultColor;
+      }
+      .button-wrapper {
+        margin-left: -10px;
+      }
+      .bannerBtn {
+        display: inline-block;
+        @include rwd($xxs) {
+          &:first-child {
+            position: relative;
+            left: -9px;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      // z-index: 5;
+      text-align: left;
+      bottom: 50px;
+      left: 5px;
+    }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      z-index: 10;
+      opacity: 1;
+      background: #7d7d7d;
+      &:first-child {
+        margin-right: 30px;
+      }
+      &:last-child {
+        margin-left: 30px;
+      }
+    }
+    .pagination-wrapper {
+      position: relative;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: transparent;
+      border: 1px solid $primaryColor;
+      width: 14px;
+      height: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $primaryColor;
+        border-radius: 50%;
+      }
+    }
+  }
+  .banner-videos {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 15;
+    iframe {
+      width: 300px;
+      height: 180px;
+      @include rwd($sm) {
+        width: 170px;
+        height: 100px;
+      }
+    }
+  }
+}

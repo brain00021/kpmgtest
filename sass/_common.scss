@@ -1,0 +1,88 @@
+// readmore button
+.readMoreBtn {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1d70b7;
+}
+
+// rotate custom title
+.custom-title {
+  width: 170px;
+
+  h2 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 75px;
+    color: #e6e6e6;
+    transform: rotate(-90deg);
+  }
+  @include rwd($md) {
+    width: 100%;
+
+    h2 {
+      transform: rotate(0deg);
+    }
+  }
+  @include rwd($sm) {
+    h2 {
+      font-size: 40px;
+      line-height: 55px;
+    }
+  }
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  .card-title {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+  .card-detail {
+    width: 85%;
+    // height: 200px;
+    background: $defaultColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: -15%;
+    // margin-bottom: 20px;
+    flex-direction: column;
+    padding: 15px;
+    h6.title {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 0;
+    }
+    p {
+      margin-top: 10px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #7d7d7d;
+    }
+    .readMoreBtn {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 20px;
+    }
+  }
+}

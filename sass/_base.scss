@@ -1,0 +1,25 @@
+$xxl: 2048px; // web
+$xl: 1440px; // web-s
+$lg: 1024px; // pad
+$md: 768px; // pad-s
+$sm: 640px;
+$xs: 480px; // mobile
+$xxs: 360px; // mobile-s
+
+// website theme color
+$primaryColor: #2b64b5;
+$defaultColor: #ffffff;
+$testimonialColor: #eff2f5;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@mixin rwd($vw: $md, $limit: max-width) {
+  @media all and (#{$limit}: $vw) {
+    @content;
+  }
+}
+
+body {
+  padding-top: 100px;
+  font-family: "Roboto";
+}

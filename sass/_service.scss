@@ -1,0 +1,49 @@
+.service-wrapper {
+  display: flex;
+  align-items: center;
+  @include rwd($md) {
+    flex-direction: column;
+  }
+  .custom-title {
+    margin-top: 50px;
+  }
+  .detail {
+    flex: 1;
+  }
+  .item-box {
+    padding: 50px 0;
+    @include rwd($md) {
+      padding: 25px 0;
+    }
+    @include rwd($sm) {
+      padding: 0;
+    }
+    .slogam {
+      margin-bottom: 50px;
+      .title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 38px;
+        color: #000000;
+        b {
+          color: $primaryColor;
+        }
+      }
+      .detail {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #7d7d7d;
+        margin-top: 20px;
+      }
+    }
+    // .col-lg-6:first-child {
+    //   position: relative;
+    //   margin-top: 150px;
+    // }
+  }
+}

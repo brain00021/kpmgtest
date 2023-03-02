@@ -1,0 +1,109 @@
+.footer {
+  background: #3e3e3e;
+  padding: 5%;
+  overflow: hidden;
+  @include rwd($md) {
+    padding: 20px 15px;
+  }
+  .footer-icon {
+    margin-left: auto;
+    margin-top: -20px;
+    @include rwd($md) {
+      margin-top: 0;
+    }
+  }
+  .info-link-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include rwd($lg) {
+      margin-top: 50px;
+    }
+    @include rwd($sm) {
+      flex-direction: column;
+      margin-top: 25px;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      @include rwd($sm) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      a {
+        display: block;
+        color: $defaultColor;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 30px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $defaultColor;
+        @include rwd($sm) {
+          margin-bottom: 10px;
+        }
+      }
+      &:first-child {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .info-subscribe-wrapper {
+    @include rwd($lg) {
+      margin-top: 50px;
+    }
+    @include rwd($sm) {
+      margin-top: 25px;
+    }
+    h6.title {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: $defaultColor;
+      margin-top: 0;
+    }
+    input {
+      color: $defaultColor;
+      background: transparent;
+      box-shadow: none;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #cfcfcf;
+      outline: none;
+      margin-top: 20px;
+      padding: 20px 0;
+      &::placeholder {
+        color: $defaultColor;
+      }
+      @include rwd($sm) {
+        margin-top: 0px;
+      }
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      background: $primaryColor;
+      color: $defaultColor;
+      font-weight: 500;
+      border: none;
+      margin-top: 50px;
+      &:hover {
+        background: darken($primaryColor, 5%);
+      }
+      @include rwd($sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

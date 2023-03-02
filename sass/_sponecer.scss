@@ -1,0 +1,40 @@
+.sponecer-wrapper {
+  display: flex;
+  padding: 15px 0;
+  height: 200px;
+  background: #f5f5f5;
+  @include rwd($sm) {
+    height: auto;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include rwd($md) {
+      flex-wrap: wrap;
+    }
+    @include rwd($sm) {
+      justify-content: center;
+    }
+    .icon {
+      width: 180px;
+      text-align: center;
+      margin: 5px;
+      @include rwd($lg) {
+        width: 120px;
+        &:first-child {
+          width: 70px;
+          @include rwd($sm) {
+            width: 50px;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+      }
+      @include rwd($sm) {
+        margin: 10px;
+      }
+    }
+  }
+}

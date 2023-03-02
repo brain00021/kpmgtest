@@ -1,0 +1,102 @@
+.currentProjectWrapper {
+  overflow: hidden;
+  #tabs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    padding: 50px;
+    @include rwd($sm) {
+      padding: 25px;
+    }
+    li a {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      color: #e6e6e6;
+      padding: 0 50px;
+      width: 100%;
+      display: block;
+      cursor: pointer;
+      @include rwd($md) {
+        text-align: center;
+      }
+      @include rwd($sm) {
+        padding: 0 25px;
+        font-size: 15px;
+      }
+      @include rwd($xs) {
+        padding: 0 10px;
+      }
+      &.inactive {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: $primaryColor;
+        @include rwd($sm) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .currentProjectPanel {
+    padding: 0 20px;
+    @include rwd($md) {
+      padding: 0;
+    }
+    .swiper {
+      padding: 0 80px;
+
+      @include rwd($md) {
+        padding: 0 45px;
+      }
+      @include rwd($xs) {
+        padding: 0 25px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background-color: $primaryColor;
+        border-radius: 50%;
+        &:after {
+          font-size: 20px;
+          color: $defaultColor;
+        }
+        @include rwd($md) {
+          width: 30px;
+          height: 30px;
+          &::after {
+            font-size: 10px;
+          }
+        }
+      }
+      .swiper-button-prev {
+        left: 5px;
+        @include rwd($xs) {
+          left: 0px;
+        }
+      }
+      .swiper-button-next {
+        right: 5px;
+        @include rwd($xs) {
+          right: 0px;
+        }
+      }
+      .swiper-button-prev:after {
+        position: relative;
+        left: -2px;
+      }
+      .swiper-button-next:after {
+        position: relative;
+        right: -2px;
+      }
+    }
+  }
+}
