@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- header -->
@@ -132,13 +133,13 @@
         <h2>About</h2>
       </div>
       <div class="detail">
-        <div class="banner-title">
+        <div class="banner-title" data-aos="fade-down" data-aos-delay="700">
           <p>We know how to reduce your energy consumption</p>
         </div>
-        <div class="banner">
+        <div class="banner" data-aos="fade-down" data-aos-delay="800">
           <img src="assets/about/banner1.jpeg" alt="" />
         </div>
-        <div class="banner-title2">
+        <div class="banner-title2" data-aos="fade-down" data-aos-delay="900">
           <h4>Energy Services</h4>
           <p>
             Lorem ipsum dolor sit amet. Eos labore omnis qui maxime rerum ut
@@ -172,7 +173,7 @@
                 id dolorem ducimus qui assumenda provident.
               </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="400">
               <div class="card-title">
                 <img src="assets/server/nav1.jpeg" />
               </div>
@@ -186,7 +187,7 @@
                 <a href="#" class="readMoreBtn">Read more</a>
               </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="500">
               <div class="card-title">
                 <img src="assets/server/nav2.jpeg" />
               </div>
@@ -202,7 +203,7 @@
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="400">
               <div class="card-title">
                 <img src="assets/server/nav3.jpeg" />
               </div>
@@ -216,7 +217,7 @@
                 <a href="#" class="readMoreBtn">Read more</a>
               </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-down" data-aos-delay="500">
               <div class="card-title">
                 <img src="assets/server/nav4.jpeg" />
               </div>
@@ -494,19 +495,19 @@
     <!-- sponecer -->
     <div class="sponecer-wrapper">
       <div class="container">
-        <div class="icon">
+        <div class="icon" data-aos="fade-down" data-aos-delay="400">
           <img src="assets/sponcer/logo1.png" alt="" />
         </div>
-        <div class="icon">
+        <div class="icon" data-aos="fade-down" data-aos-delay="500">
           <img src="assets/sponcer/logo2.png" alt="" />
         </div>
-        <div class="icon">
+        <div class="icon" data-aos="fade-down" data-aos-delay="600">
           <img src="assets/sponcer/logo3.png" alt="" />
         </div>
-        <div class="icon">
+        <div class="icon" data-aos="fade-down" data-aos-delay="700">
           <img src="assets/sponcer/logo4.png" alt="" />
         </div>
-        <div class="icon">
+        <div class="icon" data-aos="fade-down" data-aos-delay="800">
           <img src="assets/sponcer/logo5.png" alt="" />
         </div>
       </div>
@@ -565,6 +566,10 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/index.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
